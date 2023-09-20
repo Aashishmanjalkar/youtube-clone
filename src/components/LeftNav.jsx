@@ -22,14 +22,17 @@ const LeftNav = () => {
         break;
     }
   }
+  
   return (
     <div className='md:block w-[240px] overflow-y-auto h-full py-4 bg-black absolute md:relative z-10 translate-x-[-240] md:translate-x-0 transition-all' >
       <div className="flex px-5 flex-col">
-        {categories.map((item) => {
+        {categories.map((item,index) => {
+      
           return (
             <>
               <LeftNavMenuItem
-                key={item.name}
+              
+                key={index}
                 text = {item.type === "home" ? "Home" : item.name}
                 icon={item.icon}
                 action = {()=>{
