@@ -78,10 +78,10 @@ const Header = () => {
           <div className="flex items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]">
             <FiBell className='text-white text-xl cursor-pointer' />
           </div>
+        </div>
           <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
             <img src="https://i.pravatar.cc/200" alt='profilePic' />
           </div>
-        </div>
       </div>
     </div>
   )
