@@ -33,7 +33,7 @@ const Header = () => {
   }
 
   const { pathname } = useLocation();
-  const pageName = pathname?.split("/").filter(Boolean)?.[0];
+  const pageName = pathname?.split("/").filter(Boolean)?.[0] ?? '';
   return (
     <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 md:px-5 bg-white dark:bg-black">
       {loading && <Loader />}
@@ -56,7 +56,7 @@ const Header = () => {
       </div>
       <div className="group flex items-center">
         <div className="flex h-8 md:h-10 md:ml-10 md:pl-5 border-2 border-[#303030] rounded-l-3xl group-focus-within:border-blue-500 md:group-focus-within:ml-5 md:group-focus-within:pl-0">
-          <div className='w-10 items-center justify-center hidden'>
+          <div className='w-10 items-center justify-center hidden group-focus-within:md:flex'>
             <CiSearch className="text-white text-xl" />
           </div>
           <input type="text"
